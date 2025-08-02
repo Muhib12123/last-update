@@ -1,0 +1,128 @@
+.skill-container{
+    position: relative;
+}
+
+
+/* right part  */
+
+.box-details{
+    background-color: #f6f4c2;
+    padding: 15px;
+    width: 380px;
+    position: absolute;
+    left: 73%;
+    top: 0;
+}
+
+.box-details .id-skill{
+    font-family:Verdana, Tahoma, sans-serif;
+    width: 240px;
+    padding: 5px;
+    text-align: left ;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+
+.box-details .name-skill{
+    border: 1px solid #a202f8;
+    font-family:Verdana, Tahoma, sans-serif;
+    width: 240px;
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    text-align: center;
+    background-color: #58eb2f;
+}
+
+.box-details .age-skill{
+    border: 1px solid #fa86ec;
+    font-family:Verdana, Tahoma, sans-serif;
+    width: 240px;
+    padding: 5px;
+    font-size: 18px;
+    margin-left: 15%;
+    text-align: center;
+    background-color: #fc91bf;
+}
+.id-edit-imo{
+    font-size: 28px;
+    margin-right: -5px;
+}
+
+.id-behind{
+    color: #a202f8;
+}
+
+/* middle part  */
+
+.box-skills{
+    background-color: #f6f4c2;
+    padding: 15px;
+    margin: 20px auto;
+    width: 420px;
+    margin-bottom: 50px;
+}
+
+.box-skills .skill-skill{
+    font-family:Verdana, Tahoma, sans-serif;
+    width: 240px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 15%;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+
+.box-skills .pro-box{
+
+    background-color: #e5e7e7ef;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.box-skills .pro-box span{
+    position: absolute;
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #42c8f0;
+}
+
+
+.box-skills .pro-box .edit-pro{
+    margin: 4px 5px 0;
+    font-size: 20px;
+}
+
+.box-skills .pro-text{
+    position: relative;
+    text-align: left;
+    width: 350px;
+    margin-bottom: -48px;
+    margin-top: 60px;
+}
+
+
+.space{
+    padding: 1px;
+    background-color: rgb(0, 0, 255);
+    border: 1px solid rgb(95, 95, 94);
+
+}
+/* left part  */
+
+.edit-hello{
+    margin-left: 40px;
+    position: absolute;
+    text-align: left;
+    margin-top: -200px;
+    width: 350px;
+}
+

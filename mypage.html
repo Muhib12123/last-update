@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% block body %}
+<header class="header">
+    <h1 class="name-edit">اهلين يا جماعة</h1>
+    <ul class="link1">
+        👇 الموقع الاول
+        <li class="edit-skills"><a href="skills" title="To skills page" target="_blank">Skills page</a></li>
+    </ul>
+    <ul class="link2">
+        👇 الموقع الثاني 
+        <li class="edit-about"><a href="about" title="To about page" target="_blank">About page</a></li>
+    </ul>
+
+    <ul class="link2">
+        👇 الموقع الثالث
+        <li class="edit-about"><a href="index" title="To Istanbuly page" target="_blank">New page</a></li>
+    </ul>
+
+    <ul class="link2">
+        👇 الموقع الرابع
+        <li class="edit-about"><a href="phone" title="To phone page" target="_blank">Phone page</a></li>
+    </ul>
+
+</header>
+
+<section class="img-section">
+    <video class="vid1" controls src="{{ url_for( 'static', filename='vids/muhib.webm')}}"></video>
+    
+    <img class="img1" src="https://images.unsplash.com/photo-1562813733-b31f71025d54?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+</section>
+
+
+<aside class="aside-audio">
+
+    <audio controls >
+        <source src="{{ url_for('static', filename='music-effect/screech-wave-lmao-41324.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</aside>
+
+
+<form class="form">
+
+    <!-- user background color -->
+
+    <div class="color">
+
+        <label for="bg-color" class="bg-text-color">Click me to change bg-color</label>
+        <input id="bg-color" class="edit-color" type="color">
+
+    </div>
+
+    <div class="all-info-box"></div>  <!-- start of user box -->
+
+    <!-- left side of user page -->
+        
+        <div class="over-user-box">
+            <div class="anima-user"></div>
+            <div class="username">
+            
+                <label class="user-dis" for="user">Username</label>
+                <input id="user" class="user-input" type="text" required placeholder="Ex: Muhib_Istanbuly" name="user" minlength="3" maxlength="20">
+                
+            </div>
+            <div class="anima-email"></div> 
+            <div class="email">
+                <label class="user-dis" for="email">Email</label>
+                <input id="email" class="email-input" type="email" required name="email" placeholder="Example@gmail.com">
+            </div> 
+            <div class="anima-password"></div>
+            <div class="password">
+                <label class="user-dis" for="pass">Password</label>
+                <input id="pass" class="pass-input" type="password" required name="pass" minlength="10" maxlength="20">
+            </div>
+            <div class="anima-age"></div>
+            <div class="age">
+                <label class="user-dis" for="age">Age</label>
+                <input id="age" class="age-input" type="number" required min="10" max="99"  name="age">
+            </div>
+
+        </div>
+
+        <!-- middle side of user page -->
+
+        <div class="gender">
+            <p class="middle-description">Select your gender:</p>
+            <ol class="middle-values">
+                <li>
+                    <input id="male" class="checked-choosing-box" type="radio" checked name="gender" value="male">
+                    <label class="checked-dis-box" for="male">Male</label>
+                </li>
+
+                <li>
+                    <input id="female" class="checked-choosing-box" type="radio" name="gender" value="female">
+                    <label class="checked-dis-box" for="female">Female</label>
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="skills">
+            <p class="middle-description">Which skills do you have?</p>
+            <ol class="middle-values">
+                <li>
+                    <input id="python" class="checked-choosing-box" type="checkbox" name="skills" value="python">
+                    <label class="checked-dis-box" for="python">Python</label>
+                </li>
+
+                <li>
+                    <input id="java" class="checked-choosing-box" type="checkbox" name="skills" value="javascript">
+                    <label class="checked-dis-box" for="java">JavaScript</label>
+                </li>
+
+                <li>
+                    <input id="c++" class="checked-choosing-box" type="checkbox" name="skills" value="c++">
+                    <label class="checked-dis-box" for="c++">C++</label>
+                </li>
+            </ol>
+        </div>
+
+        <div class="file">
+
+            <p class="middle-description">Insert your personal photo:</p>
+            <div>
+
+                <input class="file-value" type="file" id="file" name="file" accept="image/*" required>
+                <label for="file" class="file-label">Choose a File</label>
+            </div>
+        </div>
+        <!-- right side of user page -->
+
+        <div class="down-box">
+            <div class="anima-country"></div>
+            <div class="country">
+                <p class="country-description">Where are you from?</p>
+                <div class="country-outbox">
+                    <label>Choose a country:</label>
+                    <input list="list" class="country-box" name="country" required>
+                    <datalist id="list">
+                        {% for cont in data2 %}
+                            <option value="{{ cont }}"> {{ cont }} </option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+            </div>
+            <div class="anima-date"></div>
+            <div class="expired-date">
+                <p class="date-description">When your id will be expired?</p>
+                <div class="date-time">
+                    <label>Expired date:</label>
+                    <input id="date" class="date-input" type="date" required name="expired-date">
+                </div>
+            </div>
+
+
+            <div class="anima-url"></div>
+            <div class="url">
+                <p class="url-description">Put the link in this section:</p>
+                <div class="url-downbox">
+                    <label class="url-dis" for="url">URL</label>
+                    <input id="url" class="url-input" type="url" required name="url" >
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dateInput = document.getElementById('date');
+                const today = new Date();
+                const tenYearsLater = new Date();
+                tenYearsLater.setFullYear(today.getFullYear() + 10);
+
+                const formatDate = (date) => {
+                    const year = date.getFullYear();
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const day = String(date.getDate()).padStart(2, '0');
+                    return `${year}-${month}-${day}`;
+                };
+
+                dateInput.min = formatDate(today);
+                dateInput.max = formatDate(tenYearsLater);
+            });
+        </script>
+
+        <!-- submit botten -->
+
+        <div>
+            <input class="submit" type="submit" value="Continue">
+        </div>
+
+
+    </div>   <!-- end of user box -->
+
+</form>
+
+{% endblock %}

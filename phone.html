@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istanbuly</title>
+    <link rel="stylesheet" href="../static/css/design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='pics/logo.png') }}">
+</head>
+<body>
+    
+    <div class="main-body">
+
+        <h1 title="welcome to istanbuly page!"> Istanbuly </h1>
+        <p class="p-des">With Istanbuly you can use all items and more for free!</p>
+
+        <div class="box-left">
+            <p class="p-log-in" title="log in">Log in</p>
+            <form>
+                <input type="text" placeholder="Email or username" class="log-user" autofocus required title="email or username" name="Luser">
+                <input type="password" placeholder="Password" class="log-pass" required title="password"  name="Lpass">
+                <a href="/">
+                    <button class="log-in" type="submit">Log In</button>
+                </a>
+                <a href="skills" class="forgot">Forgot password?</a>
+            </form>
+
+        </div>
+
+
+        <div class="box-right">
+
+            <p class="p-sign-up" title="sign up">Sign up</p>
+
+            <form id="signup-form">
+                <input type="text" placeholder="First name" class="sign-first-name" required title="fisrt name" name="Fname">
+                <input type="text" placeholder="Last name" class="sign-last-name" required title="last name"  name="Lname">
+                <p class="sign-gender" title="gender">Gender:</p>
+                <div class="label1">
+                    <label for="male">Male</label>
+                    <input id="male" type="radio" value="male" class="sign-male" name="gender" checked>
+                </div>    
+
+                <div class="label2">
+                    <label for="female">Female</label>
+                    <input id="female" type="radio" value="female"  class="sign-female" name="gender">
+                </div>
+
+                <input type="email" placeholder="Email" class="sign-email" required title="email" name="email">
+
+                <input type="password" placeholder="Password" class="sign-pass" required minlength="9" maxlength="18" title="password" name="pass" id="pass">
+                <input type="password" placeholder="Confirm password" class="sign-pass-confirm" required minlength="9" maxlength="18" title="confirm password" name="pass2" id="pass2">
+                <a href="/">
+                    <button class="sign-up" type="submit">Sign Up</button>
+                </a>
+                <a href="skills" class="help">Any help?</a>
+            </form>
+
+        </div>
+        <footer class="footer">
+            <p class="all">�� 2021 All rights reserved.</p>
+            <a href="skills">Privacy Policy</a>
+            <a href="skills">Terms & Conditions</a>
+            <a href="skills">About Us</a>
+            <a href="skills">Contact Us</a>
+        </footer>
+
+        <script>
+            document.getElementById('signup-form').addEventListener('submit', function(event) {
+                const password = document.getElementById('pass').value;
+                const confirmPassword = document.getElementById('pass2').value;
+
+                if (password !== confirmPassword) {
+                event.preventDefault();
+                alert('Passwords do not match. Please try again.');
+                }
+            });
+        </script>
+
+
+    </div>
+</body>
+</html>

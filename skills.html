@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="head-container">
+    <h1 class="page-head"> 
+        {{ head }}
+    </h1>
+    <h2 class="page-head2">
+        {{ head2 }}
+    </h2>
+    <h3 class="page-head3">
+        {{ head3 }}
+    </h3>
+</div>
+<div class="main-des">
+    <p class="page-description">{{ des }}</p>
+    <p class="page-description2">{{ des2 }}</p>
+    <p class="page-description3">{{ des3 }}</p>
+</div>
+
+
+
+{% for skill in data %}
+<div class="skill-container">
+    <div class="box-skills">
+
+        <div class="skill-skill">
+            Skill ➡️ {{  skill[2] }}
+        </div>
+        <div class="pro-text">
+            Progress
+        </div>
+        
+        <div class="pro-box">
+            <span data-width= "{{skill[3]}}%">
+                <div class="edit-pro">
+                {{skill[3]}}%
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="edit-hello">
+        {{ skill[4]  }}
+    </div>
+    <div class="box-details">
+        <div class="id-skill">
+            <span class="id-edit-imo">🆔</span><span class="id-behind">:</span> {{  skill[0] }}
+        </div>
+
+        <div class="name-skill">
+            Name 👉 {{  skill[1] }}
+        </div>
+        <div class="age-skill">
+            Age 👉 {{  skill[5] }}
+        </div>
+    </div>
+</div>   
+
+    <hr class="space"/>
+
+
+{% endfor %}
+{% endblock %}

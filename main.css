@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+
+    background-color: #f6f4c2;
+    font-family:arial, tahoma
+}
+
+.head-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.main-des {
+    display: flex;
+    position: relative;
+}
+
+
+.head-container h1{
+    margin: 0;
+    text-align: center;
+    text-decoration-line:underline ;
+    font-style:italic;
+    text-shadow:2px 3px 0 #928f8f ;
+    font-family: monospace;
+    font-size: 40px;
+}
+.main-des .page-description{
+    align-self: flex-start;
+    position: absolute;
+    text-decoration-line:underline ;
+    font-style:italic;
+    font-family: Georgia;
+    font-size: 23px;
+    margin-bottom: 60px;
+    margin-top: -60px;
+    margin-left: 610px
+
+
+}
+
+.head-container h2{
+    align-self: flex-start;
+    text-align: left;
+    text-decoration-line:underline ;
+    font-style:italic;
+    margin-top: -48px;
+    margin-left: 100px;
+    font-family: monospace;
+    text-shadow:2px 3px 0 #928f8f ;
+    font-size: 40px;
+}
+
+.main-des .page-description2{
+    align-self: flex-start;
+    position: absolute;
+    text-align: left;
+    text-decoration-line:underline ;
+    font-style:italic;
+    font-family: Georgia;
+    font-size: 23px;
+    margin-bottom: 40px;
+    margin-top: -60px;
+    margin-left: 150px;
+
+}
+
+
+.head-container h3{
+    align-self: flex-start;
+    text-align: right;
+    text-decoration-line:underline ;
+    margin-top: -78px;
+    font-style:italic;
+    font-family: monospace;
+    margin-left: 1160px;
+    text-shadow:2px 3px 0 #928f8f ;
+    font-size: 40px;
+}
+
+.main-des .page-description3{
+    align-self: flex-start;
+    position: absolute;
+
+    text-align: right;
+    text-decoration-line:underline ;
+    font-style:italic;
+    font-family: Georgia;
+    font-size: 23px;
+    margin-top: -60px;
+    margin-left: 1170px;
+
+}
