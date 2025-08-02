@@ -32,7 +32,7 @@ body{
 }
 
 .user{
-    width: 100%;
+    width: 95%;
     height: 50px;
     border-radius: 5px;
     border: 1px solid rgb(198, 201, 202);
@@ -47,7 +47,7 @@ body{
 }
 
 .pass{
-    width: 100%;
+    width: 95%;
     height: 50px;
     border-radius: 5px;
     border: 1px solid rgb(198, 201, 202);
@@ -133,4 +133,5 @@ body{
 .create a:hover{
     text-decoration: underline;
 }
+
 
