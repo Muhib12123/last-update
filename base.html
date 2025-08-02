@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>{{ pagetitle }}</title>
     <meta name="description" content="Family langueges skills"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for(filename='main.css') }}" />
 
     {% if self_css %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/'+ self_css) }}" />
+    <link rel="stylesheet" href="{{ url_for(filename= self_css) }}" />
     {% endif %}
     <link rel="stylesheet" href="https://assets.msn.com/staticsb/statics/latest/brand/new-msn-logo-color-black.svg">
   </head>
@@ -20,4 +20,5 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
  
+
 </html>
